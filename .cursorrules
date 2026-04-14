@@ -1,0 +1,39 @@
+# week2_project — Cursor rules (HCDE 530)
+
+## Directory structure
+
+<!-- Regenerate this block when files are added, removed, or renamed (see “Maintenance” below). -->
+
+```
+week2_project/
+├── .cursorrules      # AI / editor rules for this folder
+├── .gitignore
+├── week2.md          # Competency claim (course reflection)
+├── word_count.py     # CSV load, word counts, summary output
+└── responses.csv     # Survey responses (participant_id, role, response)
+```
+
+## Maintenance (directory tree)
+
+- **Humans & AI:** Whenever the project layout changes in a meaningful way, **update the tree above in the same change** so it stays accurate.
+- Cursor does **not** auto-update this file; treating the tree as part of the “contract” avoids drift.
+
+## Stack
+- Python 3. Prefer the standard library (`csv`, `pathlib`, etc.) unless the assignment requires otherwise.
+- Data lives next to scripts (e.g. `responses.csv`); use paths that work when run from the project folder.
+
+## CSV
+- Open with `encoding="utf-8"` and `newline=""` when using `csv.reader` / `csv.DictReader`.
+- `DictReader` row keys **must match** the CSV header row exactly (`participant_id`, `role`, `response`, etc.). If headers change, update the keys in code.
+
+## Style
+- Keep comments **short and precise**; explain *why* or non-obvious behavior, not every line.
+- Prefer small, clear functions (e.g. word counting separate from I/O) with accurate docstrings.
+- Avoid drive-by refactors and unrelated files in a single change.
+
+## Edits
+- Match existing naming and structure in `word_count.py` and siblings.
+- Do not add large dependencies, boilerplate, or course README files unless asked.
+
+## Git
+- This folder is its own repo; commit messages should describe the actual change in plain language.
